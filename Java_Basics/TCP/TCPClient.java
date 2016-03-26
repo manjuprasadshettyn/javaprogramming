@@ -25,8 +25,7 @@ try
 {
 link = new Socket(host,PORT); //Step 1.
 Scanner input = new Scanner(link.getInputStream());//Step 2
-PrintWriter output =
-new PrintWriter( link.getOutputStream(),true); //Step 2.
+PrintWriter output = new PrintWriter( link.getOutputStream(),true); //Step 2.
 //Set up stream for keyboard entry...
 Scanner userEntry = new Scanner(System.in);
 String message, response;

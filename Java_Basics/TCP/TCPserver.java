@@ -28,17 +28,15 @@ Socket link = null; //Step 2.
 try
 {
 link = servSock.accept(); //Step 2.
-Scanner input =
-new Scanner(link.getInputStream()); //Step 3.
-PrintWriter output = new
-PrintWriter( link.getOutputStream(),true); //Step 3.
+Scanner input = new Scanner(link.getInputStream()); //Step 3.
+PrintWriter output = new PrintWriter( link.getOutputStream(),true); //Step 3.
 int numMessages = 0;
 String message = input.nextLine(); //Step 4.
 while (!message.equals("close"))
 {
-System.out.println("Message received.");
+output.println("Message received.");
 numMessages++;
-output.println("Message "  + message);//Step 4.
+System.out.println("Message "  + message);//Step 4.
 message = input.nextLine();
 }
 //output.println(numMessages + " messages received."); //Step 4.
