@@ -1,4 +1,4 @@
-import java.sql.*;//15th prgram
+import java.sql.*;
 import java.util.*;
 import java.io.*;
  class JDBC2Mods

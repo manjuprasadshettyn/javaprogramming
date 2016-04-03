@@ -35,9 +35,9 @@ public class UDPServer
 			int clientPort = inPacket.getPort(); //Step 5.
 			messageIn = new String(inPacket.getData(), 0,inPacket.getLength());
 //Step 6.
-			System.out.println("Message received.");
+			System.out.println("Message "  + messageIn);
 			numMessages++;
-			messageOut = "Message "  + messageIn;
+			messageOut = "Message received.";
 			outPacket = new DatagramPacket(messageOut.getBytes(),
 			messageOut.length(),clientAddress, clientPort); //Step 7.
 			datagramSocket.send(outPacket); //Step 8.
